@@ -6,6 +6,7 @@ namespace CourseShop.Services.Catalog.Models
     public class Course
     {
         [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string UserId { get; set; }
         [BsonRepresentation(BsonType.ObjectId)]
