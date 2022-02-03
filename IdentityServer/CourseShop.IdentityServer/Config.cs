@@ -15,7 +15,8 @@ namespace CourseShop.IdentityServer
             new ApiResource[]
             {
                  new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
-                 new ApiResource("photo_stock_catalog"){Scopes={"photo_stock_fullpermission"}},
+                 new ApiResource("resource_photo_stock"){Scopes={"photo_stock_fullpermission"}},
+                 new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
                  new ApiResource(IdentityServerConstants.LocalApi.ScopeName),
             };
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -32,7 +33,8 @@ namespace CourseShop.IdentityServer
             {
                 new ApiScope("catalog_fullpermission","Catalog Api için full erişim"),
                 new ApiScope("photo_stock_fullpermission","Photo Stock Api için full erişim"),
-                new ApiScope(IdentityServerConstants.LocalApi.ScopeName),
+                new ApiScope("basket_fullpermission","Basket API için full erişim"),
+                new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
         public static IEnumerable<Client> Clients =>
