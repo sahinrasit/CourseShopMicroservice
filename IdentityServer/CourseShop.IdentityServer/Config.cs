@@ -17,6 +17,8 @@ namespace CourseShop.IdentityServer
                  new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
                  new ApiResource("resource_photo_stock"){Scopes={"photo_stock_fullpermission"}},
                  new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
+                 new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
+                 new ApiResource("resource_order"){Scopes={"order_fullpermission"}},
                  new ApiResource(IdentityServerConstants.LocalApi.ScopeName),
             };
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -34,6 +36,8 @@ namespace CourseShop.IdentityServer
                 new ApiScope("catalog_fullpermission","Catalog Api için full erişim"),
                 new ApiScope("photo_stock_fullpermission","Photo Stock Api için full erişim"),
                 new ApiScope("basket_fullpermission","Basket API için full erişim"),
+                new ApiScope("discount_fullpermission","Discount API için full erişim"),
+                new ApiScope("order_fullpermission","Order API için full erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -58,8 +62,9 @@ namespace CourseShop.IdentityServer
                     AllowOfflineAccess=true,
                     ClientSecrets= {new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256())},
                     AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
-                    AllowedScopes={ "basket_fullpermission"
+                    AllowedScopes={  "basket_fullpermission"
                                     ,"order_fullpermission"
+                                    ,"discount_fullpermission"
                                     ,"gateway_fullpermission"
                                     ,IdentityServerConstants.StandardScopes.Email
                                     ,IdentityServerConstants.StandardScopes.OpenId

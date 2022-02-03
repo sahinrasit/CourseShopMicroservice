@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:50846",
+      "applicationUrl": "http://localhost:20355",
       "sslPort": 0
     }
   },
   "profiles": {
-    "CourseShop.Services.Discount": {
+    "CourseShop.Services.Order.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5014",
+      "applicationUrl": "http://localhost:5015",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
